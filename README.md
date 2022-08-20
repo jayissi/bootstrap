@@ -10,3 +10,8 @@ organization. They are:
 * gitops-hub
 * gitops-dev
 * gitops-stage
+
+## Deploying
+
+* Log into the hub cluster with `oc`
+* Run: **$** `make install`
