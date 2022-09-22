@@ -1,7 +1,7 @@
 .PHONY: install uninstall
 
 install:
-	oc create -f ./manifests
+	helm install bootstrap --namespace local-cluster .
 
 uninstall:
-	oc delete -f ./manifests
+	helm uninstall bootstrap --namespace local-cluster
