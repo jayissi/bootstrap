@@ -1,7 +1,9 @@
 clusters:
-- chartName: gitops-dev
+- clusterName: dev
+  chartName: gitops-dev
   repoUrl: https://github.com/hello-world-gitops/gitops-dev.git
-- chartName: gitops-hub
+- clusterName: local-cluster
+  chartName: gitops-hub
   repoUrl: https://github.com/hello-world-gitops/gitops-hub.git
 # - chartName: gitops-stage
 #   repoUrl: https://github.com/hello-world-gitops/gitops-stage.git

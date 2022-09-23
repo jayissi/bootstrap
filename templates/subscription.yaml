@@ -1,4 +1,5 @@
 {{ range .Values.clusters }}
+---
 apiVersion: app.k8s.io/v1beta1
 kind: Application
 metadata:
@@ -63,5 +64,5 @@ metadata:
 spec:
   clusterSelector:
     matchLabels:
-      'local-cluster': 'true'
+      "name": "{{ .clusterName }}"
 {{ end }}
