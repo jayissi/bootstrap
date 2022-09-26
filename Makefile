@@ -1,10 +1,19 @@
 .PHONY: install upgrade uninstall
 
 install:
-	helm install bootstrap --namespace local-cluster .
+	helm install \
+		--create-namespace \
+		--namespace boostrap \
+		bootstrap \
+		.
 
 upgrade:
-	helm upgrade bootstrap --namespace local-cluster .
+	helm upgrade \
+		--namespace bootstrap \
+		boostrap \
+		.
 
 uninstall:
-	helm uninstall bootstrap --namespace local-cluster
+	helm uninstall \
+		--namespace bootstrap \
+		bootstrap
