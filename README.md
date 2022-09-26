@@ -12,6 +12,10 @@ the three GitOps repos (gitops-hub, gitops-dev, and gitops-stage). These
 subscriptions continuously deploy the Argo CD application configurations in
 each GitOps repos to each respective cluster.
 
+Additionally, the bootstrap chart deploys an ACM Governance Policy to install
+OpenShift GitOps across all ACM managed clusters. This is important since the
+GitOps repos being bootstrapped from this chart require OpenShift GitOps.
+
 The bootstrap Helm chart is expected to be manually deployed by an OpenShift
 admin only once. Once deployed, ACM will periodically check the GitOps Git
 repos for changes and deploy those.
