@@ -1,3 +1,7 @@
+# The OpenShift GitOps operator will normally create this namespace
+# automatically. We need it faster than the few minutes it takes for the
+# operator to install though. Manually creating this namespace avoids
+# "Namespace does not exist" errors when bootstrapping.
 apiVersion: v1
 kind: Namespace
 metadata:
