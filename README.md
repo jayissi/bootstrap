@@ -16,6 +16,31 @@ The bootstrap Helm chart is expected to be manually deployed by an OpenShift
 admin only once. Once deployed, ACM will periodically check the GitOps Git
 repos for changes and deploy those.
 
+```mermaid
+graph TD
+        Admin["Admin 🧑<200d>💻"]
+        ACM["Red Hat Advanced Cluster<br />Mangement (ACM) for Kubernetes"]
+
+        subgraph stage [Stage OpenShift Cluster]
+        GitOpsStage["OpenShift GitOps<br />(Argo CD)"]
+        end
+
+        subgraph hub [Hub Openshift Cluster]
+        ACM
+        GitOpsHub["OpenShift GitOps<br />(Argo CD)"]
+        end
+
+        subgraph dev [Dev OpenShift Cluster]
+        GitOpsDev["OpenShift GitOps<br />(Argo CD)"]
+        end
+
+        Admin -. "Manually deploys 'bootstrap' chart<br />(This only happens once, everything<br />past this point is automated)" .-> ACM
+
+        ACM -- "Continously deploys<br />'gitops-hub' repo" --> GitOpsHub
+        ACM -- "Continously deploys<br />'gitops-dev' repo" --> GitOpsDev
+        ACM -- "Continously deploys<br />'gitops-stage' repo" --> GitOpsStage
+```
+
 ## Deploying
 
 * Log into the hub cluster with `oc`
