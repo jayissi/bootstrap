@@ -18,7 +18,7 @@ repos for changes and deploy those.
 
 ```mermaid
 graph TD
-        Admin["Admin 🧑<200d>💻"]
+        Admin["Admin 🧑‍💻"]
         ACM["Red Hat Advanced Cluster<br />Mangement (ACM) for Kubernetes"]
 
         subgraph stage [Stage OpenShift Cluster]
