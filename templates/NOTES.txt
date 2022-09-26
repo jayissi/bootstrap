@@ -1,0 +1,14 @@
+The following ACM Subscriptions (Applications) have been created to deploy
+GitOps repos:
+
+{{ range .Values.clusters }}
+    * {{ .clusterName }} ({{ .chartName }})
+{{ end }}
+
+An ACM Governance Policy to install OpenShift GitOps on all ACM managed
+clusters has also been created.
+
+- WHAT'S NEXT -
+
+* In the next several minutes, OpenShift GitOps will be deployed across your
+clusters.
