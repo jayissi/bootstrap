@@ -1,6 +1,6 @@
-**NOTE: This repo is part of [Hello World: GitOps].** Check out the
-organization page for how this repository fits into the greater multi-cluster
-GitOps architecture.
+**NOTE: This repo is part of [Hello World: GitOps].** It's not intended to be
+referenced directly. Instead, check out the organization's page for how this
+repository fits into the greater multi-cluster GitOps architecture.
 
 # Boostrap
 
