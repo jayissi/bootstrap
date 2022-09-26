@@ -2,8 +2,8 @@
 
 install:
 	helm install \
+		--namespace bootstrap \
 		--create-namespace \
-		--namespace boostrap \
 		bootstrap \
 		.
 
