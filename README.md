@@ -1,8 +1,8 @@
-# Boostrap
-
 **NOTE: This repo is part of [Hello World: GitOps].** Check out the
 organization page for how this repository fits into the greater multi-cluster
 GitOps architecture.
+
+# Boostrap
 
 This repo contains a Helm chart used to bootstrap the Hello World GitOps
 multi-cluster OpenShift fleet using Red Hat Advanced Cluster Management (ACM).
