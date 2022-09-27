@@ -59,4 +59,4 @@ added or removed, it is necessary to redeploy this chart with updated values.
 * Log into the hub cluster with `oc`
 * Run: `make upgrade`
 
-[Hello OpenShift: Multi-Cluster Management]: https://github.com/hello-openshift-multicluster-gitops
+[Hello OpenShift: Multi-Cluster GitOps]: https://github.com/hello-openshift-multicluster-gitops
