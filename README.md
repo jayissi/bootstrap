@@ -1,11 +1,12 @@
-**NOTE: This repo is part of [Hello World: GitOps].** It's not intended to be
-referenced directly. Instead, check out the organization's page for how this
-repository fits into the greater multi-cluster GitOps architecture.
+**NOTE: This repo is part of [Hello OpenShift: Multi-Cluster GitOps].** It's
+not intended to be referenced directly. Instead, check out the organization's
+page for how this repository fits into the greater multi-cluster GitOps
+architecture.
 
 # Boostrap
 
-This repo contains a Helm chart used to bootstrap the Hello World GitOps
-multi-cluster OpenShift fleet using Red Hat Advanced Cluster Management (ACM).
+This repo contains a Helm chart used to bootstrap multi-cluster management of
+Red Hat OpenShift clusters using Red Hat Advanced Cluster Management (ACM).
 
 The bootstrap Helm chart deploys ACM Subscriptions (Applications) for each of
 the three GitOps repos (gitops-hub, gitops-dev, and gitops-stage). These
@@ -58,4 +59,4 @@ added or removed, it is necessary to redeploy this chart with updated values.
 * Log into the hub cluster with `oc`
 * Run: `make upgrade`
 
-[Hello World: GitOps]: https://github.com/hello-world-gitops
+[Hello OpenShift: Multi-Cluster Management]: https://github.com/hello-openshift-multicluster-gitops

@@ -8,12 +8,12 @@ clusters:
   chartName: gitops-dev
   # repoUrl should be a full path to the GitOps repo for this environment.
   # Should end with ".git".
-  repoUrl: https://github.com/hello-world-gitops/gitops-dev.git
+  repoUrl: https://github.com/hello-openshift-multicluster-gitops/gitops-dev.git
 
 - clusterName: local-cluster # Hub cluster in ACM is always called "local-cluster"
   chartName: gitops-hub
-  repoUrl: https://github.com/hello-world-gitops/gitops-hub.git
+  repoUrl: https://github.com/hello-openshift-multicluster-gitops/gitops-hub.git
 
 - clusterName: stage
   chartName: gitops-stage
-  repoUrl: https://github.com/hello-world-gitops/gitops-stage.git
+  repoUrl: https://github.com/hello-openshift-multicluster-gitops/gitops-stage.git
