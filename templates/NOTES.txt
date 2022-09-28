@@ -1,29 +1,29 @@
 The following ACM Subscriptions (Applications) have been created to deploy
 GitOps repos:
 
-{{- range .Values.clusters }}
-    * {{ .clusterName }} - {{ .chartName }} ({{ .reoUrll }})
-{{ end -}}
+{{ range .Values.clusters }}
+    * {{ .clusterName }} - {{ .chartName }} ({{ .repoUrl }})
+{{ end }}
 
 An ACM Governance Policy to install OpenShift GitOps on all ACM managed
 clusters has also been created.
 
 The full bootstrapping process may take up to 20 minutes.
 
-- WHAT'S NEXT -
+--- WHAT'S NEXT ---
 
 * In the next several minutes, OpenShift GitOps will be deployed across your
-clusters. You can monitor the progress on each cluster with:
+  clusters. You can monitor the progress on each cluster with:
 
     `oc get pods -n openshift-gitops`
 
 * Once OpenShift GitOps is running (all pods are up and "Ready"), the
-applications specified in the GitOps repos above will be deployed through Argo
-CD. You can monitor the process by logging into Argo CD. Get the URL of Argo
-CD with:
+  applications specified in the GitOps repos above will be deployed through
+  Argo CD. You can monitor the process by logging into Argo CD. Get the URL of
+  Argo CD with:
 
     `oc get routes openshift-gitops-server -n openshift-gitops`
 
 * Additional ACM policies will be deployed once OpenShift GitOps is running
-(all pods are up and "Ready") on the Hub cluster. The ACM policies will
-enforce configurations across all clusters.
+  (all pods are up and "Ready") on the Hub cluster. The ACM policies will
+  enforce configurations across all clusters.
