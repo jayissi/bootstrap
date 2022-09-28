@@ -1,3 +1,4 @@
+{{ if .Values.createOpenShiftGitOpsNamespace }}
 # The OpenShift GitOps operator will normally create this namespace
 # automatically. We need it faster than the few minutes it takes for the
 # operator to install though. Manually creating this namespace avoids
@@ -6,3 +7,4 @@ apiVersion: v1
 kind: Namespace
 metadata:
   name: openshift-gitops
+{{ end }}

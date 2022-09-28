@@ -1,3 +1,6 @@
+# Set to false if OpenShift GitOps is already installed on the hub cluster.
+createOpenShiftGitOpsNamespace: true
+
 # List of clusters. If your environment will have additional clusters, those
 # would go here.
 clusters:
