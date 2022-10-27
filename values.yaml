@@ -6,18 +6,11 @@ createOpenShiftGitOpsNamespace: true
 # would go here.
 clusters:
   # clusterName should match cluster's name in ACM
-- clusterName: dev
+- clusterName: local-cluster # Hub cluster in ACM is always called "local-cluster"
   # chartName should match the name of the chart (in Chart.yaml) of the GitOps
   # Helm chart in the GitOps repo for this environment
-  chartName: gitops-dev
+  chartName: gitops-hub
   # repoUrl should be a full path to the GitOps repo for this environment.
   # Should end with ".git".
-  repoUrl: https://github.com/hello-openshift-multicluster-gitops/gitops-dev.git
+  repoUrl: https://github.com/jayissi/Sandbox-GitOps.git
 
-- clusterName: local-cluster # Hub cluster in ACM is always called "local-cluster"
-  chartName: gitops-hub
-  repoUrl: https://github.com/hello-openshift-multicluster-gitops/gitops-hub.git
-
-- clusterName: stage
-  chartName: gitops-stage
-  repoUrl: https://github.com/hello-openshift-multicluster-gitops/gitops-stage.git
