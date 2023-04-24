@@ -49,10 +49,10 @@ spec:
   clusterConditions: []
   clusterSelector:
     matchExpressions:
-      - key: local-cluster
+      - key: cluster.open-cluster-management.io/clusterset
         operator: In
         values:
-          - "true"
+          - default
 ---
 apiVersion: policy.open-cluster-management.io/v1
 kind: PlacementBinding
